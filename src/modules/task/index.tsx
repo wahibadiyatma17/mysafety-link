@@ -1,8 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'next/navigation'
-import { Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 export default function RedirectTask() {
   const searchParams = useSearchParams();
@@ -35,13 +34,11 @@ export default function RedirectTask() {
   }, [taskId]);
 
   return (
-    <Suspense>
-      <main style={{ padding: 20 }}>
-        <h1>Opening MySafety App...</h1>
-        <p>
-          If nothing happens, <a href={url}>tap here</a>.
-        </p>
-      </main>
-    </Suspense>
+    <main style={{ padding: 20 }}>
+      <h1>Opening MySafety App...</h1>
+      <p>
+        If nothing happens, <a href={url}>tap here</a>.
+      </p>
+    </main>
   );
 }
